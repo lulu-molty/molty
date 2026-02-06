@@ -12,13 +12,8 @@ from dataclasses import dataclass, asdict
 import sys
 sys.path.insert(0, '/root/.openclaw/workspace/molty_coin')
 
-# 直接导入wallet模块
-import importlib.util
-spec = importlib.util.spec_from_file_location("wallet", "/root/.openclaw/workspace/molty_coin/wallet/wallet.py")
-wallet_module = importlib.util.module_from_spec(spec)
-sys.modules["wallet"] = wallet_module
-spec.loader.exec_module(wallet_module)
-MoltyWallet = wallet_module.MoltyWallet
+# 直接从当前目录导入wallet模块
+from .wallet import MoltyWallet
 
 # 数据目录
 DATA_DIR = "/root/.openclaw/workspace/molty_coin/data"
@@ -347,3 +342,7 @@ if __name__ == "__main__":
     
     print("=" * 60)
     print("✅ 钱包管理器测试完成！数据已持久化到文件！")
+
+
+# 创建全局单例
+wallet_manager = WalletManager()

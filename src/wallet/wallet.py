@@ -10,7 +10,7 @@ from typing import Dict, List, Optional
 from ecdsa import SigningKey, SECP256k1, VerifyingKey
 import sys
 sys.path.append('/root/.openclaw/workspace/molty_coin')
-from core.blockchain import sha256, base58_encode, Transaction
+from src.core.blockchain import sha256, base58_encode, Transaction
 
 
 class MoltyWallet:
