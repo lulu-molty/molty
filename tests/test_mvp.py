@@ -40,7 +40,7 @@ print(f"   ✅ 链验证通过")
 
 # 2. 测试钱包
 print("\n2️⃣ 测试钱包系统...")
-from wallet.wallet import MoltyWallet
+from src.wallet.wallet import MoltyWallet
 
 wallet = MoltyWallet("test_agent")
 print(f"   ✅ 钱包创建: {wallet.address[:30]}...")

@@ -12,7 +12,7 @@ from dataclasses import dataclass, asdict
 import sys
 sys.path.insert(0, '/root/.openclaw/workspace/molty_coin')
 
-from wallet.secure_wallet_manager import SecureWalletManager, TRANSFER_LIMITS
+from src.wallet.secure_wallet_manager import SecureWalletManager, TRANSFER_LIMITS
 
 # Bot配置
 BOT_CONFIG_FILE = "/root/.openclaw/workspace/molty_coin/data/bot_wallet_config.json"

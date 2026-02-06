@@ -18,7 +18,7 @@ from dataclasses import dataclass, asdict
 import sys
 sys.path.insert(0, '/root/.openclaw/workspace/molty_coin')
 
-from wallet.wallet_manager import WalletManager
+from src.wallet.wallet_manager import WalletManager
 
 # 数据目录
 TREASURY_DIR = "/root/.openclaw/workspace/molty_coin/data/treasury"

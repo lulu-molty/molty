@@ -2,8 +2,8 @@ import json
 import sys
 sys.path.append('/root/.openclaw/workspace/molty_coin')
 
-from identity_verifier import verifier
-from wallet.wallet_manager import wallet_manager
+from src.identity.identity_verifier import verifier
+from src.wallet.wallet_manager import wallet_manager
 
 class SecurePaymentSystem:
     """安全支付系统 - 带身份验证"""

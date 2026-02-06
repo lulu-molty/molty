@@ -8,7 +8,7 @@ import sys
 from typing import Dict, List
 sys.path.insert(0, '/root/.openclaw/workspace/molty_coin')
 
-from wallet.wallet_manager import WalletManager
+from src.wallet.wallet_manager import WalletManager
 
 
 class MOLTYBalanceChecker:

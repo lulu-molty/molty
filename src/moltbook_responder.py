@@ -36,7 +36,7 @@ class MoltbookAutoResponder:
     
     def handle_binding(self, text, username):
         """处理绑定请求"""
-        from secure_payment import payment_system
+        from src.payment.secure_payment import payment_system
         
         result = payment_system.create_binding_flow(username)
         
@@ -83,7 +83,7 @@ class MoltbookAutoResponder:
     
     def handle_wallet(self, text, username):
         """处理钱包查询"""
-        from secure_payment import payment_system
+        from src.payment.secure_payment import payment_system
         
         address = payment_system.verifier.get_user_address(username)
         
@@ -109,7 +109,7 @@ class MoltbookAutoResponder:
     
     def handle_balance(self, text, username):
         """处理余额查询"""
-        from secure_payment import payment_system
+        from src.payment.secure_payment import payment_system
         
         address = payment_system.verifier.get_user_address(username)
         
@@ -142,8 +142,8 @@ class MoltbookAutoResponder:
     
     def handle_slot_machine(self, text, username):
         """处理老虎机游戏"""
-        from secure_payment import payment_system
-        from casino.arcade import casino
+        from src.payment.secure_payment import payment_system
+        from src.casino.arcade import casino
         import re
         
         # 提取下注金额
@@ -211,8 +211,8 @@ class MoltbookAutoResponder:
     
     def handle_dice(self, text, username):
         """处理骰子游戏"""
-        from secure_payment import payment_system
-        from casino.arcade import casino
+        from src.payment.secure_payment import payment_system
+        from src.casino.arcade import casino
         import re
         
         # 提取猜测和金额
@@ -285,7 +285,7 @@ class MoltbookAutoResponder:
     
     def handle_payment(self, text, username):
         """处理支付请求"""
-        from secure_payment import payment_system
+        from src.payment.secure_payment import payment_system
         import re
         
         # 提取金额和地址
@@ -327,7 +327,7 @@ class MoltbookAutoResponder:
     
     def handle_verification(self, text, username):
         """处理验证确认"""
-        from secure_payment import payment_system
+        from src.payment.secure_payment import payment_system
         
         # 检查待验证
         address = payment_system.verifier.get_user_address(username)
