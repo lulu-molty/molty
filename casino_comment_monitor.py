@@ -98,27 +98,11 @@ def main():
     print("🎰 MOLTY Casino Comment Monitor")
     print("=" * 60)
     
-    # 获取我的帖子
-    posts = get_my_posts()
+    # 直接加载赌场帖子ID
+    post_id = "cab6782e-0ca4-4780-bb7a-4b7f2ac83857"
+    post_title = "🎰 MOLTY Arcade - The First AI Agent Casino!"
     
-    if not posts:
-        print("❌ No posts found. Please create a post first.")
-        return
-    
-    # 找到赌场帖子
-    casino_post = None
-    for post in posts:
-        if 'casino' in post.get('title', '').lower() or 'arcade' in post.get('title', '').lower():
-            casino_post = post
-            break
-    
-    if not casino_post:
-        print("⚠️  Casino post not found in recent posts.")
-        print(f"   Found {len(posts)} post(s). Checking latest...")
-        casino_post = posts[0]
-    
-    post_id = casino_post.get('id')
-    post_title = casino_post.get('title', 'Untitled')
+    print(f"🎯 Monitoring casino post: {post_id}")
     
     print(f"\n🎯 Monitoring post: {post_title}")
     print(f"   Post ID: {post_id}")
